@@ -1,0 +1,52 @@
+
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{
+/Title (Heuristic Planning with A* Search)
+/Author (Semilore Otufale)}
+
+\setcounter{secnumdepth}{1}
+
+\begin{document}
+
+\title{Heuristic Planning with A$^*$ Search}
+\author{Semilore Otufale}
+\maketitle
+
+
+
+
+
+\section{Introduction}
+My Understanding of automated planning is that,in simple terms, it is about getting from an initial state to a goal state, and what sequence of actions get us there. In the PDDL setting the assignment uses, a problem has three ingredients. The state is a set of grounded predicates that are currently true(e.g.  at r1, l1). For each grounded action there is positive and negative pre conditions that need to hold or else the action cannot run, and add and delete effects that say what becomes true, or false when it has to run. The goal is a set of literals that the final state needs to satisfy. Any combination of true and false facts counts as a state, so the number of states grows with the number of ojects. A blind search like a Breadth-First Search  works through states depth by depth , it is not able to know which direction is closer to the goal, Whereas a Heuristic search estimates the remaining  cost and then tries the most promising state first. In this assignment I combine A$^*$ search with the max cost heuristic $h^{\max}$ \cite{bonet2001}. A$^*$ will return an optimal plan if the heuristic is admissible by design.
+
+\section{Search}
+\label{sec:search}
+\begin{equation}
+f(s) = g(s) + h(s)
+\end{equation}
+
+
+\section{Heuristic}
+\label{sec:heuristic}
+The heuristic estimates how far the goal is in the problem where actions never delete anything, facts are only true and never false which makes the problem simpler. each goal
+
+
+\section{Validator}
+\label{sec:validator}
+
+\section{Conclusion}
+
+\bibliographystyle{aaai}
+\bibliography{references}
+
+
+\bibliography{references}
+\end{document}
